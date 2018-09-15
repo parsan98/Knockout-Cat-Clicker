@@ -21,6 +21,7 @@ var ViewModel = function () {
       return "Adult";
     }
   }, this);
+  this.catNickname = ko.observableArray(['Puss in boots', 'Tabatha', 'Mrs Whiskerson']);
 }
 
 ko.applyBindings(new ViewModel());
