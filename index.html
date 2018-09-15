@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cat Clicker</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
@@ -11,14 +12,15 @@
   <br>
 
   <nav data-bind="foreach: catList">
-    <span data-bind="text: name, click: $parent.changeCat"></span>
+    <span class="nav-link" data-bind="text: name, click: $parent.changeCat"></span>
   </nav>
 
-  <div data-bind="with: currentCat">
+  <div class="cat" data-bind="with: currentCat">
+    <img class="cat-image" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc, alt: name}">
     <h2 data-bind="text: name"></h2>
     <h3 data-bind="text: catLevel"></h3>
-    <div data-bind="text: clickCount"></div>
-    <img src="" alt="cute cat" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
+    <p> Click on the image of the cat to watch the counter go up. </p>
+    <div class="counter" data-bind="text: clickCount"></div>
     <div>
       <h3> Nicknames </h3>
       <ol data-bind="foreach: catNickname">
@@ -26,6 +28,11 @@
       </ol>
     </div>
   </div>
+
+  <footer>
+    <hr>
+    &copy Copyright 2018
+  </footer>
 
   <script src="js/lib/knockout-3.2.0.js"></script>
   <script src="js/app.js"></script>
