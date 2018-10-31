@@ -1,8 +1,7 @@
 # Cat Clicker using KnockOut.JS
+Live page at https://parvathy-santhosh.github.io/Knockout-Cat-Clicker/
 
 A front end web project using KnockOut.JS library
-
-
 
 ## Features
 
